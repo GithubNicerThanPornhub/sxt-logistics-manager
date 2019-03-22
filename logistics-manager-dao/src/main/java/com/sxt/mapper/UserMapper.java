@@ -27,4 +27,15 @@ public interface UserMapper {
     int updateByPrimaryKeySelective(User record);
 
     int updateByPrimaryKey(User record);
+    
+    //自定义的方法：增加一个用户的同时给他赋予角色
+    void insertUserIdAndRoleId(Integer userId,Integer roleId);
+    
+    //自定义方法：根据用户id，查出他所有的角色id
+    List<Integer> selectRoleIdByUserId(Integer userId);
+    
+  //自定义方法：根据用户id，删除他所有的角色id
+    void deleteRoleIdByUserId(Integer userId);
+
+
 }

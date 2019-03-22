@@ -23,7 +23,7 @@ public class RoleController {
 		role.setRoleName("员");//随意设置了一个参数方便展示数据，可删
 		List<Role> list=service.query(role);
 		model.addAttribute("list", list);
-		return "role";//这里是返回到role.jsp页面
+		return "role/role";//这里是返回到role.jsp页面
 	}
 	
 	
